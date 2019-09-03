@@ -1,0 +1,15 @@
+READ -> METHOD = {GET} URL = https://ancient-springs-32831.herokuapp.com/Api
+
+CREATE -> METHOD = {POST} URL = https://ancient-springs-32831.herokuapp.com/Api/create/{EmployeeName}
+
+UPDATE -> METHOD = {POST} URL = https://ancient-springs-32831.herokuapp.com/Api/update/{EmployeeID}/{NewEmployName}
+
+DELETE -> METHOD = {DELETE} URL = https://ancient-springs-32831.herokuapp.com/Api/delete/{EmployeeID}
+
+JWT Auth -> METHOD = {GET} URL = https://ancient-springs-32831.herokuapp.com/Api/AuthorizedPage you can acces this either by JWT token or session login
+
+Login -> {POST} URL = http://localhost:5001/Api/login/{EmployeeId}/{EmployeeName
+
+in order to get JWT token and get authorized to the AuthorizedPage you need to login first :
+
+By loging in you will get JWT token, if you are using POSTMAN send a GET request https://ancient-springs-32831.herokuapp.com/Api/AuthorizedPage with Header key Authorization and value <Bearer {JWT_Token}>
